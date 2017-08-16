@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="/journal/ui/css/styles.css" />
+</head>
+<body>
+
+    <div class="wrapper"><div class="recent">
+        <!-- <h1>Posts by Date</h1> -->
+{% assign exercise_total = 0 %}
+{% assign music_total = 0 %}
+{% assign books_total = 0 %}
+
+{% for post in site.categories.jack order:ascending %}
+{% assign exercise_total = exercise_total | plus: post.exercise %}
+{% assign music_total = music_total | plus: post.music %}
+{% assign books_total = books_total | plus: post.books %}
+{% endfor %}
+
+{% for post in site.categories.jack %}
+{% capture day %}{{ post.date | date: '%m%d%Y' }}{% endcapture %}
+{% capture nday %}{{ post.next.date | date: '%m%d%Y' }}{% endcapture %}
+{% if day != nday %}
+        <h2>{{ post.date | date: "%A, %B %e, %Y" }}</h2>
+{% endif %}
+        <div class="entry"><h3 id="{{ post.slug }}"><a href="#{{ post.slug }}">#</a> <a href="{{ post.link }}">{{ post.title }}</a></h3>
+        <ul>
+            <li><b>Exercise:</b> <i>{{ post.exercise }} / {{exercise_total}}</i></li>
+            <li><b>Music:</b> <i>{{ post.music }} / {{music_total}}</i></li>
+            <li><b>Book Finished:</b> <i>{{ post.books }} / {{books_total}}</i></li>
+        </ul>
+        {{ post.content }}</div>
+{% endfor %}
+    </div></div>
+
+</body>
+</html>
