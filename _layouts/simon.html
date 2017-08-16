@@ -25,7 +25,7 @@
 {% if day != nday %}
         <h2>{{ post.date | date: "%A, %B %e, %Y" }}</h2>
 {% endif %}
-        <div class="entry"><h3 id="{{ post.slug }}"><a href="#{{ post.slug }}">#</a> <a href="{{ post.link }}">{{ post.title }}</a></h3>
+        <div class="entry"><h3 id="{{ post.slug }}">{{ post.title }}</h3>
         <ul>
             <li><b>Exercise:</b> <i>{{ post.exercise }} / {{ exercise_total | divided_by:60 }}h {{ exercise_total | modulo:60 }}m</i></li>
             <li><b>Music:</b> <i>{{ post.music }} / {{ music_total | divided_by:60 }}h {{ music_total | modulo:60 }}m</i></li>
