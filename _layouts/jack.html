@@ -27,9 +27,9 @@
 {% endif %}
         <div class="entry"><h3 id="{{ post.slug }}"><a href="#{{ post.slug }}">#</a> <a href="{{ post.link }}">{{ post.title }}</a></h3>
         <ul>
-            <li><b>Exercise:</b> <i>{{ post.exercise }} / {{exercise_total}}</i></li>
-            <li><b>Music:</b> <i>{{ post.music }} / {{music_total}}</i></li>
-            <li><b>Book Finished:</b> <i>{{ post.books }} / {{books_total}}</i></li>
+                <li><b>Exercise:</b> <i>{{ post.exercise }} / {{ exercise_total | divided_by:60 }}h {{ exercise_total | modulo:60 }}m</i></li>
+                <li><b>Music:</b> <i>{{ post.music }} / {{ music_total | divided_by:60 }}h {{ music_total | modulo:60 }}m</i></li>
+                <li><b>Books Finished:</b> <i>{{ post.books }} / {{ books_total }} books</i></li>
         </ul>
         {{ post.content }}</div>
 {% endfor %}
