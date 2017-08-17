@@ -10,13 +10,19 @@
     <div class="wrapper"><div class="recent">
         <!-- <h1>Posts by Date</h1> -->
 {% assign exercise_total = 0 %}
+{% assign exercise_days = 0 %}
 {% assign music_total = 0 %}
+{% assign music_days = 0 %}
 {% assign books_total = 0 %}
+{% assign field_trips = 0 %}
 
-{% for post in site.categories.simon order:ascending %}
+{% for post in site.categories.simon reversed %}
 {% assign exercise_total = exercise_total | plus: post.exercise %}
+{% if post.exercise > 0 %}{% assign exercise_days = exercise_days | plus: 1 %}{% endif %}
 {% assign music_total = music_total | plus: post.music %}
+{% if post.music > 0 %}{% assign music_days = music_days | plus: 1 %}{% endif %}
 {% assign books_total = books_total | plus: post.books %}
+{% assign field_trips = field_trips | plus: post.field_trip %}
 {% endfor %}
 
 {% for post in site.categories.simon %}
@@ -27,9 +33,10 @@
 {% endif %}
         <div class="entry"><h3 id="{{ post.slug }}">{{ post.title }}</h3>
         <ul>
-            <li><b>Exercise:</b> <i>{{ post.exercise }} / {{ exercise_total | divided_by:60 }}h {{ exercise_total | modulo:60 }}m</i></li>
-            <li><b>Music:</b> <i>{{ post.music }} / {{ music_total | divided_by:60 }}h {{ music_total | modulo:60 }}m</i></li>
+            <li><b>Exercise:</b> <i>{{ post.exercise }} / {{ exercise_total | divided_by:60 }}h {{ exercise_total | modulo:60 }}m over {{ exercise_days }} day{% if exercise_days > 1 %}s{% endif %}.</i></li>
+            <li><b>Music:</b> <i>{{ post.music }} / {{ music_total | divided_by:60 }}h {{ music_total | modulo:60 }}m over {{ music_days }} day{% if music_days > 1 %}s{% endif %}.</i></li>
             <li><b>Books Finished:</b> <i>{{ post.books }} / {{ books_total }} books</i></li>
+            <li><b>Field Trips:</b> <i>{% if post.field_trip > 0 %}Yes{% else %}No{% endif %} / {{ field_trips }}</i></li>
         </ul>
         {{ post.content }}</div>
 {% endfor %}
