@@ -8,6 +8,16 @@
 <body>
 
     <div class="wrapper"><div class="recent">
+        <!-- <h1>Posts by Date</h1> -->
+{% for post in site.categories.general %}
+{% capture day %}{{ post.date | date: '%m%d%Y' }}{% endcapture %}
+{% capture nday %}{{ post.next.date | date: '%m%d%Y' }}{% endcapture %}
+{% if day != nday %}
+        <h2>{{ post.date | date: "%A, %B %e, %Y" }}</h2>
+{% endif %}
+        <div class="entry"><h3 id="{{ post.slug }}">{{ post.title }}</h3>
+        {{ post.content }}</div>
+{% endfor %}
     </div></div>
 
 </body>
