@@ -106,3 +106,9 @@ i.today {
     padding-left: 2px;
     margin-right: 4px;
 }
+
+h3 > span {
+    font-size: .875em;
+    font-style: italic;
+    font-weight: normal;
+}

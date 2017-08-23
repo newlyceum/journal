@@ -26,9 +26,16 @@
 {% endfor %}
 
 {% for post in site.categories.simon %}
+{% capture postDate %}{{ post.date | date: '%m%d%Y' }}{% endcapture %}
         <div class="entry">
             <h2>{{ post.date | date: "%A, %B %e, %Y" }}</h2>
-            <h3 id="{{ post.slug }}">{{ post.title }}</h3>
+            {% for subPost in site.categories.general %}
+            {% capture subPostDate %}{{ subPost.date | date: '%m%d%Y' }}{% endcapture %}
+                        {% if postDate == subPostDate %}
+                        <p><a href="/journal/#{{ post.slug }}">Photos &amp; more</a></p>
+                        {% endif %}
+            {% endfor %}
+            <h3 id="{{ post.slug }}">{{ post.title }} <span>by Jack</span></h3>
             <ul>
                 <li><b>Exercise:</b> <i class="today">{{ post.exercise }}m</i> {% if forloop.first %}<b>Total:</b> <i>{{ exercise_total | divided_by:60 }}h {{ exercise_total | modulo:60 }}m over {{ exercise_days }} day{% if exercise_days != 1 %}s{% endif %}.</i>{% endif %}</li>
                 <li><b>Music:</b> <i class="today">{{ post.music }}m</i> {% if forloop.first %}<b>Total:</b> <i>{{ music_total | divided_by:60 }}h {{ music_total | modulo:60 }}m over {{ music_days }} day{% if music_days != 1 %}s{% endif %}.</i>{% endif %}</li>
