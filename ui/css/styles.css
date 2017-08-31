@@ -115,3 +115,10 @@ h3 > span {
     font-style: italic;
     font-weight: normal;
 }
+
+sup, footnote {
+    font-size: .75em;
+}
+sup {
+    margin-top: -.125em;
+}

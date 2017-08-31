@@ -37,12 +37,13 @@
             {% endfor %}
             <h3 id="{{ post.slug }}">{{ post.title }} <span>by Jack</span></h3>
             <ul>
-                <li><b>Exercise:</b> <i class="today">{{ post.exercise }}m</i> <b>Total:</b> <i>{{ exercise_total | divided_by:60 }}h {{ exercise_total | modulo:60 }}m over {{ exercise_days }} day{% if exercise_days != 1 %}s{% endif %}.</i></li>
+                <li><b>Exercise:</b> <i class="today">{{ post.exercise }}m</i><sup>*</sup> <b>Total:</b> <i>{{ exercise_total | divided_by:60 }}h {{ exercise_total | modulo:60 }}m over {{ exercise_days }} day{% if exercise_days != 1 %}s{% endif %}.</i></li>
                 <li><b>Music:</b> <i class="today">{{ post.music }}m</i> <b>Total:</b> <i>{{ music_total | divided_by:60 }}h {{ music_total | modulo:60 }}m over {{ music_days }} day{% if music_days != 1 %}s{% endif %}.</i></li>
                 <li><b>Books Finished:</b> <i class="today">{{ post.books }}</i> <b>Total:</b> <i>{{ books_total }} books</i></li>
                 <li><b>Field Trip:</b> <i class="today">{% if post.field_trip > 0 %}Yes{% else %}No{% endif %}</i> <b>Total:</b> <i>{{ field_trips }}</i></li>
             </ul>
             {{ post.content }}
+            <p class="footnote">* In addition to daily neighborhood walks, outdoor play.</p>
         </div>
 {% endfor %}
     </div></div>
