@@ -116,9 +116,10 @@ h3 > span {
     font-weight: normal;
 }
 
-sup, footnote {
+sup, .footnote {
     font-size: .75em;
 }
 sup {
-    margin-top: -.125em;
+    top: -.125em;
+    position: relative;
 }
