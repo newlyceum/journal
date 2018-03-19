@@ -3,7 +3,7 @@ Which continent is your country or region found on?
 What is the population of your country or countries in your region?
 
 Which oceans does it border, if any?
-Norwegian Sea
+Norwegian Sea Baltic Sea North Sea
 What form of government does it have?
 
 Is religion a big part of life in your country or region?
