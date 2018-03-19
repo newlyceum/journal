@@ -17,7 +17,7 @@ What are some notable historical events or periods in your country or region?
 What industries dominate your country or region's economy?
 
 What would you like to visit in your country or region?
-
+I would like to visit the Viking Ship Museum.
 ***
 
 3-15: Scandinavia is...
