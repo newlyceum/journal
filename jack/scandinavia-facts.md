@@ -1,7 +1,7 @@
 Which continent is your country or region found on?
 Europe
 What is the population of your country or countries in your region?
-
+20,886,480
 Which oceans does it border, if any?
 Norwegian Sea Baltic Sea North Sea
 What form of government does it have?
