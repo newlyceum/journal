@@ -11,7 +11,7 @@ Is religion a big part of life in your country or region?
 What foods do people eat?
 
 What are some of the traditions in your country or region?
-
+One is Midsummer, on the longest day of the year. Another is St.Knut's day.
 What are some notable historical events or periods in your country or region?
 
 What industries dominate your country or region's economy?
