@@ -26,3 +26,4 @@ Mon March 19. In greece there was the Trojan war. It had a lot of Im winning Oth
 Tue march 20. The people of greece believed a lot in religion. They had all the minor and major gods. If I go to greece i would like to see the Parthenon. 
 Wednesday march 21. The population of greece is 107,684,77.
 Thursday March 22.One of the greek traditions Is called Lazarus Saturday. Anothher one is Palm sunday which is After Lazarus sunday.
+Friday March 23. A very succesful industry in greece is tourism.
