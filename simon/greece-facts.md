@@ -5,7 +5,7 @@ What is the population of your country or countries in your region?
 Which oceans does it border, if any?
 ✔️
 What form of government does it have?
-
+✔️
 Is religion a big part of life in your country or region?
 ✔️
 What foods do people eat?
@@ -15,7 +15,7 @@ What are some of the traditions in your country or region?
 What are some notable historical events or periods in your country or region?
 ✔️
 What industries dominate your country or region's economy?
-
+✔️
 What would you like to visit in your country or region?
 ✔️
 ***
@@ -27,3 +27,4 @@ Tue march 20. The people of greece believed a lot in religion. They had all the 
 Wednesday march 21. The population of greece is 107,684,77.
 Thursday March 22.One of the greek traditions Is called Lazarus Saturday. Anothher one is Palm sunday which is After Lazarus sunday.
 Friday March 23. A very succesful industry in greece is tourism.
+Monday march 26. The state of government in greece is the hellenic republic.
