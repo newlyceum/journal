@@ -7,7 +7,7 @@ Norwegian Sea Baltic Sea North Sea
 What form of government does it have?
 
 Is religion a big part of life in your country or region?
-
+Yes.
 What foods do people eat?
 One example is a smörgåsbord, which is lots of small dishes, hot and cold. Smörgåsbord means "buttered table".
 They also eat lots of meat and fish.
